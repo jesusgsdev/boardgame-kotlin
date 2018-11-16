@@ -12,11 +12,9 @@ Note that the numbering of cells starts with 1, not with 0. A board of a width 2
 
 (2, 1) (2, 2)
 
-For the following examples, we'll use this board of a width 2:
+For the following examples, we'll use this board of a width 2: `val board = createSquareBoard(2)`
 
-`val board = createSquareBoard(2)`
-
-If you call `board.getCellOrNull(3, 3)` for such board, you'll get null as the result, because the board doesn't have a cell with such coordinates. The function Board.getCell should throw IllegalArgumentException for incorrect values of i and j.
+If you call `board.getCellOrNull(3, 3)` for such board, you'll get null as the result, because the board doesn't have a cell with such coordinates. The function `Board.getCell` should throw `IllegalArgumentException` for incorrect values of i and j.
 
 You can write `board.getRow(1, 1..2)` or `board.getRow(1, 2 downTo 1)`, and you'll get the lists of cells [(1, 1), (1, 2)] and [(1, 2), (1, 1)] accordingly. Note how using the range 2 downTo 1 returns a row in a reversed order. You can use any range to get a part of a column or a row.
 
